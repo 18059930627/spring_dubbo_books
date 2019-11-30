@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
+    <base th:href="|${#request.getContextPath()}/|">
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
@@ -17,6 +18,6 @@
 <body>
 <h1>学生图书管理平台</h1>
 <a href="student/list">学生管理</a>
-<a>图书管理管理</a>
+<a href="book/list">图书管理</a>
 </body>
 </html>

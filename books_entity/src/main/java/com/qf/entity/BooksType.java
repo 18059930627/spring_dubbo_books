@@ -11,13 +11,9 @@ import lombok.experimental.Accessors;
 @NoArgsConstructor
 @AllArgsConstructor
 @Accessors(chain = true)
-@TableName("t_book")
-public class Books extends BaseEntity {
-    private String name;
-    private Integer storage;
-    @TableField("type_id")
-    private  Integer typeId;
+@TableName("t_book_type")
+public class BooksType extends BaseEntity {
 
-    @TableField(exist = false)
-    private BooksType booksType;
+    @TableField("type_name")
+    private String typeName;
 }

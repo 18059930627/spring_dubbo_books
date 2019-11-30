@@ -5,6 +5,8 @@ dubbo:
     port: -1
   registry:
     address: zookeeper://192.168.40.166:2181
+  consumer:
+    check: false
 
 spring:
   datasource:
