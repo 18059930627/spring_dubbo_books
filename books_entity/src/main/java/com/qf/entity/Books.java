@@ -7,9 +7,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
 
-import java.io.Serializable;
-import java.util.List;
-
 /**
  * @Author chenzhongjun
  * @Date 2019/11/30
@@ -18,19 +15,15 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Accessors(chain = false)
-@TableName("t_student")
-public class Student implements Serializable {
+@TableName("t_book")
+public class Books {
 
     private Integer id;
 
     private String name;
 
-    private Integer age;
+    private Integer storage;
 
-    private Integer sex;
-
-    private String phone;
-
-    @TableField(exist = false)
-    private List<Books> booksList;
+    @TableField("type_id")
+    private Integer typeId;
 }
