@@ -1,0 +1,10 @@
+server:
+  port: 80
+dubbo:
+  application:
+    name: web_manager
+  registry:
+    address: zookeeper://192.168.40.166:2181
+spring:
+  thymeleaf:
+    cache: false

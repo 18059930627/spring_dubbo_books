@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>spring_dubbo_books</artifactId>
+        <groupId>com.qf</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+    <dependencies>
+        <!--依赖实体类-->
+        <dependency>
+            <groupId>com.qf</groupId>
+            <artifactId>books_entity</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>books_service_api</artifactId>
+
+
+</project>
