@@ -5,6 +5,11 @@ dubbo:
     name: web_manager
   registry:
     address: zookeeper://192.168.40.166:2181
+  protocol:
+    port: -1
+  consumer:
+    check: false
+
 spring:
   thymeleaf:
     cache: false

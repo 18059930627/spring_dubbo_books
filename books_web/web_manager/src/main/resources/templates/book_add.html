@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>添加一本图书</title>
+</head>
+<body>
+
+<form method="get" action="/book/addOneBook">
+    <table>
+        <tr>
+            <td>图书名称：</td>
+            <td><input type="text" name="name"/></td>
+        </tr>
+
+        <tr>
+            <td>图书库存：</td>
+            <td><input type="text" name="storage"/></td>
+        </tr>
+
+        <tr>
+            <td>图书类别：</td>
+            <td>
+                <select name="typeId">
+                    <option th:each="bt:${booksTypeList}" th:value="${bt.id}" th:text="${bt.typeName}"></option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2"><input type="submit" value="提交"/></td>
+        </tr>
+
+    </table>
+</form>
+
+</body>
+</html>
