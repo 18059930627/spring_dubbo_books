@@ -1,5 +1,6 @@
 package com.qf.service;
 
+import com.baomidou.mybatisplus.extension.service.IService;
 import com.qf.entity.Student;
 
 import java.util.List;
@@ -8,7 +9,7 @@ import java.util.List;
  * @Author chenzhongjun
  * @Date 2019/11/30
  */
-public interface IStudentService {
+public interface IStudentService extends IService<Student> {
     List<Student> getStudentList();
 
     int deleteStudentById(Integer id);
@@ -18,4 +19,8 @@ public interface IStudentService {
     int updateStudent(Student student);
 
     Student getBooksById(Integer id);
+
+    int deleteBooksById(Integer id, Integer booksId);
+
+    int addBooksById(Integer id, Integer booksId);
 }

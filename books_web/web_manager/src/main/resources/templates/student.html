@@ -9,9 +9,6 @@
             margin-bottom: 20px;
             text-align: center;
         }
-        #table{
-            text-align: center;
-        }
         table{
             margin: auto;
         }
@@ -41,6 +38,12 @@
                <td>
                     <a th:href="|/student/delete?id=${student.id}|">删除</a>
                     <a th:href="|/student/getStudentById?id=${student.id}|">修改</a>
+               </td>
+           </tr>
+           <tr>
+               <td colspan="6">
+                   <a href="/student/showAddStudent">添加学生</a>
+                   <input type="button" onclick="javascript:history.back()" value="返回"/>
                </td>
            </tr>
        </table>

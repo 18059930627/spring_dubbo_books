@@ -6,6 +6,8 @@ dubbo:
     name: stu_service
   registry:
     address: zookeeper://192.168.40.166:2181
+  protocol:
+    port: -1
 
 spring:
   datasource:
@@ -13,6 +15,10 @@ spring:
     username: root
     password: 123
     driver-class-name: com.mysql.cj.jdbc.Driver
+
+  thymeleaf:
+    cache: false
+
 mybatis-plus:
   mapper-locations: classpath:com/qf/dao/*.xml
   type-aliases-package: com.qf.entity

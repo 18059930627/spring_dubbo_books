@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        h1{
+            margin-top: 150px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        table{
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>学生图书界面</h1>
+    <table  border="1" cellspacing="0" cellpadding="10">
+        <tr>
+            <td>学生姓名</td>
+            <td>图书名称</td>
+            <td>图书类别</td>
+            <td>操作</td>
+        </tr>
+
+        <tr th:each="books :${student.booksList}">
+            <td th:text="${student.name}"></td>
+            <td th:text="${books.name}"></td>
+            <td th:text="${books.booksType.typeName}"></td>
+            <td>
+                <a th:href="|/student/deleteBooksById?id=${student.id}&booksId=${books.id}|">删除</a>
+            </td>
+
+        </tr>
+        <tr>
+            <td colspan="4">
+                <a th:href="|/student/showBooksById?id=${student.id}|">添加学生图书</a>
+                <input type="button" onclick="javascript:history.back()" value="返回"/>
+            </td>
+        </tr>
+
+
+    </table>
+</body>
+</html>
