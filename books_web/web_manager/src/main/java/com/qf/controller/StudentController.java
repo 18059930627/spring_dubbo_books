@@ -139,6 +139,7 @@ public class StudentController {
      */
     @RequestMapping("addStudent")
     public String addStudent(Student student){
+        System.out.println("aa");
         studentService.save(student);
         return "redirect:/student/list";
     }
